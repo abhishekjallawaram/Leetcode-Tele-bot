@@ -1,7 +1,10 @@
 
 /tests
-/leetcode-env
+/leetcode-env/lib
 .env
 /__pycache__
 .DS_Store
+/leetcode-env/bin
 
+/leetcode-env/
+/leetcode-env
