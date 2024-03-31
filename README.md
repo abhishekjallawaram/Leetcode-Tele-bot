@@ -32,11 +32,17 @@ Before starting, ensure you have the following:
 
 1. **Create a `bot` directory and a `main.py` file:** Your project structure should now look like this:
     ```
-    your-project/
+    leetcode-reminder-bot/
+    │
     ├── bot/
+    │   ├── __init__.py
+    │   ├── commands.py
+    │   └── leetcode.py
+    │
     ├── .env
     ├── requirements.txt
     └── main.py
+
     ```
 2. **Set up your `.env` file:** Inside this file, place your Telegram bot token like so:
     ```
