@@ -2,7 +2,7 @@
 /tests
 /leetcode-env/lib
 .env
-/__pycache__
+bot/__pycache__
 .DS_Store
 /leetcode-env/bin
 
