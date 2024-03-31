@@ -1,74 +1,112 @@
-# Building a LeetCode Reminder Bot for Telegram: A Beginner's Guide
+# LeetCode Contest Reminder Bot 🚀
 
-This guide is designed to walk beginners through the process of creating a LeetCode Reminder Bot for Telegram. By the end of this tutorial, you'll have a functioning bot that notifies users about upcoming LeetCode contests.
+Welcome to the **LeetCode Contest Reminder Bot**, a dedicated Telegram bot crafted to ensure competitive programmers never miss out on their next big challenge. Whether it's a Weekly or Bi-Weekly contest, or if you're just looking to tackle the Question of the Day (QOTD), this bot has got you covered. With timely reminders and direct links to daily challenges, sharpening your coding skills has never been more convenient.
 
-## Prerequisites
+## 🌟 Features
 
-Before starting, ensure you have the following:
-- Basic knowledge of Python programming.
-- Python installed on your computer ([Download Python](https://www.python.org/downloads/)).
-- A Telegram account.
+- **Contest Timing Notifications**: Get ahead with precise reminders for LeetCode's Weekly and Bi-Weekly contests. Know exactly how much time you have until the next intellectual showdown.
+- **Daily Coding Challenge**: Dive into LeetCode's Question of the Day (QOTD) directly from your Telegram chat. Details include title, difficulty, tags, and a direct problem link.
+- **Commands at Your Fingertips**: A comprehensive list of commands ensures you seamlessly make the most out of your bot experience.
 
-## Step 1: Create Your Telegram Bot
+## 🛠 Getting Started
 
-1. **Start a chat with BotFather:** Search for [@BotFather](https://t.me/botfather) on Telegram and start a conversation.
-2. **Create a new bot:** Send the `/newbot` command and follow the prompts to set up your bot. You'll need to choose a name and a username for your bot.
-3. **Save your bot token:** After the setup, BotFather will give you an API token. Save it; you'll need this token to interact with the Telegram Bot API.
+### Prerequisites
 
-## Step 2: Set Up Your Project Environment
+Before you embark on this journey, make sure you're equipped with:
 
-1. **Create a new directory for your project:** This will be your working directory.
-2. **Open a terminal in your project directory.**
-3. **Create a virtual environment:** Run `python -m venv env` to create a virtual environment named `env`. Then, activate it with `source env/bin/activate` on Unix/macOS or `.\env\Scripts\activate` on Windows.
-4. **Create a `requirements.txt` file:** This file should list all the necessary Python packages:
+- Python (version 3.6 or later)
+- A Telegram account
+- A token for your Telegram bot, obtainable via [BotFather](https://t.me/botfather)
+
+### Installation Steps
+
+1. **Clone the Repository**
+
+    Kick things off by cloning this repository to your local machine. Open your terminal and run:
+
+    ```bash
+    git clone https://github.com/yourusername/leetcode-reminder-bot.git
+    cd leetcode-reminder-bot
     ```
-    python-telegram-bot==13.7
-    pytz==2021.1
-    python-decouple==3.4
-    ```
-5. **Install dependencies:** Run `pip install -r requirements.txt` to install the required packages.
 
-## Step 3: Write Your Bot's Code
+2. **Prepare Your Python Environment**
 
-1. **Create a `bot` directory and a `main.py` file:** Your project structure should now look like this:
-    ```
-    leetcode-reminder-bot/
-    │
-    ├── bot/
-    │   ├── __init__.py
-    │   ├── commands.py
-    │   └── leetcode.py
-    │
-    ├── .env
-    ├── requirements.txt
-    └── main.py
+    For a smooth sailing development experience, set up a virtual environment:
 
+    ```bash
+    python3 -m venv env
+    source env/bin/activate
     ```
-2. **Set up your `.env` file:** Inside this file, place your Telegram bot token like so:
+
+3. **Install Dependencies**
+
+    Navigate through the high seas of development with all the necessary packages:
+
+    ```bash
+    pip install -r requirements.txt
     ```
+
+4. **Bot Token Configuration**
+
+    Keep your bot's heart beating with its unique token. Create a `.env` file in the root directory and insert:
+
+    ```plaintext
     API_KEY=your_bot_token_here
     ```
-3. **Implement your bot's logic:** Use the `python-telegram-bot` library to interact with the Telegram API, `pytz` for timezone management, and `python-decouple` for environment variable management.
 
-## Step 4: Run Your Bot
+### 🚀 Launching the Bot
 
-1. **Execute `main.py`:** Run `python main.py` in your terminal. Your bot should now be live and responding to commands on Telegram.
+With the wind in your sails, it's time to launch:
 
-## Step 5: Interact With Your Bot on Telegram
+```bash
+python main.py
+```
+
+You are now ready to interact with your bot on Telegram and explore the vast ocean of coding challenges.
+
+## 📜 Bot Commands
+
+| Command       | Description                                                |
+|---------------|------------------------------------------------------------|
+| `/start`      | A hearty welcome and bot instructions.                     |
+| `/commands`   | Lists all the available commands for easy navigation.      |
+| `/weeklytime` | Countdown to the next Weekly Contest.                      |
+| `/biweeklytime` | Countdown to the next Bi-Weekly Contest.                |
+| `/timeleft`   | Time left for ongoing contests or until the next contest embarks. |
+| `/QOTD`       | Fetch the Question of the Day from LeetCode.               |
+
+## 🛠 Development Insights
+
+Dive deeper into the workings of this bot, built with the `python-telegram-bot` library and powered by `pytz` for timezone accuracy. Contest times and the daily challenge are fetched with grace, ensuring you're always in the loop.
+
+### Important Files
+
+- `commands.py`: The heart of the bot, handling all your Telegram commands.
+- `leetcode.py`: The brain, calculates contest times and fetches the daily challenge.
+
+## 🤝 Contributing
+
+Set sail with us! Contributions are the winds that propel this project forward. Feel free to fork the project, make your changes, and submit a pull request with your treasures.
+
+## 📜 License
+
+This project is proudly licensed under the MIT License. For more details, see the LICENSE file.
+
+Sail forth, brave coder, and may the winds of code always be at your back!
+
+
+## Interact With Your Bot on Telegram
 
 1. **Start the bot:** Send the `/start` command to your bot on Telegram.
 2. **Check contest reminders:** Use the custom commands you've implemented (like `/timeleft`) to interact with your bot and receive reminders about LeetCode contests.
 
-## Step 6: Deploy Your Bot (Optional)
+## Deploy Your Bot (Optional)
 
 Consider deploying your bot to a cloud platform like Heroku or a VPS to keep it running 24/7.
 
 1. **Choose a deployment platform:** Research platforms like Heroku, AWS, or DigitalOcean for deploying your bot.
-2. **Follow the platform-specific deployment guide:** Each platform has its own method for deploying applications, so follow the instructions carefully.
+2. **Follow the platform-specific deployment guide:** Each platform has its method for deploying applications, so follow the instructions carefully.
 
-## Conclusion
-
-Congratulations! You've built and deployed your own LeetCode Reminder Bot for Telegram. This project is a great starting point for diving deeper into bot development and exploring more advanced features.
 
 ## Additional Resources
 
